@@ -115,6 +115,14 @@ jobs:
           sudo apt update
           sudo apt install -y libsgx-launch libsgx-urts
           source /opt/intel/sgxsdk/environment
+          git clone https://github.com/intel/intel-sgx-ssl.git
+          wget https://www.openssl.org/source/openssl-1.1.1q.tar.gz
+          cp openssl-1.1.1q.tar.gz intel-sgx-ssl/openssl_source
+          rm -f openssl-1.1.1q.tar.gz
+          cd intel-sgx-ssl/Linux
+          source /opt/intel/sgxsdk/environment
+          make all
+          make install
 
       - name: checkout
         uses: actions/checkout@v3
@@ -145,6 +153,14 @@ jobs:
           sudo apt update
           sudo apt install -y libsgx-launch libsgx-urts
           source /opt/intel/sgxsdk/environment
+          git clone https://github.com/intel/intel-sgx-ssl.git
+          wget https://www.openssl.org/source/openssl-1.1.1q.tar.gz
+          cp openssl-1.1.1q.tar.gz intel-sgx-ssl/openssl_source
+          rm -f openssl-1.1.1q.tar.gz
+          cd intel-sgx-ssl/Linux
+          source /opt/intel/sgxsdk/environment
+          make all
+          make install
 
       - name: checkout
         uses: actions/checkout@v3
@@ -212,6 +228,14 @@ jobs:
           sudo apt update
           sudo apt install -y libsgx-launch libsgx-urts
           source /opt/intel/sgxsdk/environment
+          git clone https://github.com/intel/intel-sgx-ssl.git
+          wget https://www.openssl.org/source/openssl-1.1.1q.tar.gz
+          cp openssl-1.1.1q.tar.gz intel-sgx-ssl/openssl_source
+          rm -f openssl-1.1.1q.tar.gz
+          cd intel-sgx-ssl/Linux
+          source /opt/intel/sgxsdk/environment
+          make all
+          make install
 
       - name: Build Sample [wasm-c-api]
         run: |
@@ -268,6 +292,14 @@ jobs:
           sudo apt update
           sudo apt install -y libsgx-launch libsgx-urts
           source /opt/intel/sgxsdk/environment
+          git clone https://github.com/intel/intel-sgx-ssl.git
+          wget https://www.openssl.org/source/openssl-1.1.1q.tar.gz
+          cp openssl-1.1.1q.tar.gz intel-sgx-ssl/openssl_source
+          rm -f openssl-1.1.1q.tar.gz
+          cd intel-sgx-ssl/Linux
+          source /opt/intel/sgxsdk/environment
+          make all
+          make install
 
       - name: Build Sample [basic]
         run: |
@@ -364,6 +396,15 @@ jobs:
           wget -qO - https://download.01.org/intel-sgx/sgx_repo/ubuntu/intel-sgx-deb.key | sudo apt-key add -
           sudo apt update
           sudo apt install -y libsgx-launch libsgx-urts
+          source /opt/intel/sgxsdk/environment
+          git clone https://github.com/intel/intel-sgx-ssl.git
+          wget https://www.openssl.org/source/openssl-1.1.1q.tar.gz
+          cp openssl-1.1.1q.tar.gz intel-sgx-ssl/openssl_source
+          rm -f openssl-1.1.1q.tar.gz
+          cd intel-sgx-ssl/Linux
+          source /opt/intel/sgxsdk/environment
+          make all
+          make install
 
       - name: run spec tests
         run: |
