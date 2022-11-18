@@ -60,7 +60,7 @@ main(int argc, char **argv)
     int ret_code = -1;
 
     // Generate user_data by SHA256 buffer and the wasm module.
-    // user_data = SHA256(buffer || sha256_wasm_module)
+    // user_data = SHA256(sha256_wasm_module || buffer)
     const char *buffer = "This is a sample.";
 
     // If you want to declare the evidence of type rats_sgx_evidence_t on the
